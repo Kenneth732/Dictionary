@@ -12,3 +12,38 @@ def print_nested_dict(d, indent=0):
                     print(f'{" " * (indent + 2)}{item}')
         else:
             print(f'{" " * indent}{key}: {value}')
+
+person = {
+    'firstName': 'Dean',
+    'lastName': 'Deo',
+    'hobbies': [
+        {
+            'name': 'Video Games',
+            'type': 'Indoor'
+        },
+        {
+            'name': 'Hiking',
+            'type': 'Outdoor'
+        }
+    ],
+    'job': [
+        {
+            'company': 'Google',
+            'position': 'Front End'
+        },
+        {
+            'company': 'LinkedIn',
+            'position': 'Back End'
+        }
+    ],
+    'friends': [
+        {
+            'name': 'Mike'
+        },
+        {
+            'name': 'Mary'
+        }
+    ]
+}
+
+print_nested_dict(person)
